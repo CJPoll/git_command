@@ -17,7 +17,7 @@ def command command, &block
 			is_option = true
 			option = arg.gsub /--/, ''
 		elsif flag?(arg)
-			options[arg] = true
+			options[arg.gsub(/-/, '').to_sym] = true
 		else
 			args << arg
 		end
