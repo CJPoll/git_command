@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 	s.name 			= "git_command"
-	s.version 		= "0.0.1"
+	s.version 		= "0.0.4"
 	s.date 			= "2015-06-09"
 	s.summary 		= "A small framework for creating custom git commands in ruby"
 	s.description 	= "A small framework for creating custom git commands in ruby"

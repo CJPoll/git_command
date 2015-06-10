@@ -1,9 +1,5 @@
 def command command, &block
-	@commands ||= {}
-
-	@commands[command] = block
-
-	temp_args = ARGV
+	temp_args = ARGV.dup
 	first = temp_args.shift
 
 	args = []
@@ -27,7 +23,7 @@ def command command, &block
 		end
 	end
 
-	args = [ nil ] if args = []
+	args = [ nil ] if args == []
 
 	if first == command.to_s
 		block.call *args, **options
